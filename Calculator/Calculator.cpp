@@ -12,59 +12,64 @@ int main()
     system("title Basic Calculator");
     char choice;
     using namespace std;
-    cout << "===========>Calculator<===========\n";
-    cout << "1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Raise to power\n6.Exit\n\n";
-    cout << "Choice: ";
-    cin >> choice;
-
-    switch (choice)
+    for(;;)
     {
-    case '1':
-        system("cls");
-        add();
-        break;
+        cout << "===========>Calculator<===========\n";
+        cout << "1.Addition\n2.Subtraction\n3.Multiplication\n4.Division\n5.Raise to power\n6.Exit\n\n";
+        cout << "Choice: ";
+        cin >> choice;
+
+        switch (choice)
+        {
+            case '1':
+                system("cls");
+                add();
+                break;
 
 
-    case '2':
-        system("cls");
-        sub();
-        break;
+            case '2':
+                system("cls");
+                sub();
+                break;
 
 
-    case '3':
-        system("cls");
-        mul();
-        break;
+            case '3':
+                system("cls");
+                mul();
+                break;
 
 
-    case '4':
-        system("cls");
-        div();
-        break;
+            case '4':
+                system("cls");
+                div();
+                break;
 
 
-    case '5':
-        system("cls");
-        int a;
-        int n;
+            case '5':
+                system("cls");
+                int a;
+                int n;
 
-        std::cout << "Number: ";
-        std::cin >> a;
-        std::cout << "Raise to power: ";
-        std::cin >> n;
-        std::cout << "Score: " << pow(a, n) << std::endl;
-        system("pause");
-        break;
-
-
-    case '6':
-        exit(0);
-        break;
+                std::cout << "Number: ";
+                std::cin >> a;
+                std::cout << "Raise to power: ";
+                std::cin >> n;
+                std::cout << "Score: " << pow(a, n) << std::endl;
+                system("pause");
+                system("cls");
+                break;
 
 
-    default:
-        cout << "Nope.";
-        exit(0);
+            case '6':
+                exit(0);
+                break;
+
+
+            default:
+                cout << "\nNope.\n";
+                system("pause");
+                exit(0);
+        }
     }
     return 0;
 }
@@ -83,6 +88,7 @@ void add()
 
     std::cout << "Score: " << score << std::endl;
     system("pause");
+    system("cls");
 }
 void sub()
 {
@@ -99,6 +105,7 @@ void sub()
 
     std::cout << "Score: " << score << std::endl;
     system("pause");
+    system("cls");
 }
 void mul()
 {
@@ -115,6 +122,7 @@ void mul()
 
     std::cout << "Score: " << score << std::endl;
     system("pause");
+    system("cls");
 }
 void div()
 {
@@ -133,6 +141,7 @@ void div()
 
         std::cout << "Score: " << score << std::endl;
         system("pause");
+        system("cls");
     }
     else
     {
@@ -148,6 +157,7 @@ void div()
         system("cls");
         std::cout << "Game over!\n";
         system("pause");
+        system("cls");
     }
 }
 int pow(int a, int n)
